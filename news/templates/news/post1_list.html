@@ -1,0 +1,14 @@
+{% extends 'news/base.html' %}
+
+{% block content %}
+{{ block.super }}
+		{% for post1 in posts1 %}
+			<div>
+				<p>published: {{ post1.published_date }}</p>
+				</br>
+				<h2><a href="{% url 'post1_list' %}">{{ post1.title1 }}</a></h2>
+				<p>{{ post1.text1|linebreaks }}</p>
+				</br>
+			</div>
+		{% endfor %}
+		{% endblock %}		

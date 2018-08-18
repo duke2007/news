@@ -1,0 +1,12 @@
+{% extends 'news/base.html' %}
+
+
+{% block editorial %}
+<div>
+	{% if editorial.edit_published_date %}
+		{{ editorial.edit_published_date }}
+	{% endif %}
+	<h2>{{ editorial.edit_title }}</h2>
+	<p>{{ editorial.edit_text|linebreaks }}</p>
+</div>
+{% endblock %}
